@@ -1,0 +1,26 @@
+a:hover {
+    text-decoration: none;
+}
+
+.card {
+    flex-basis: 28%;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+
+}
+.img{
+    width: 100%;
+    height: 700px;
+}

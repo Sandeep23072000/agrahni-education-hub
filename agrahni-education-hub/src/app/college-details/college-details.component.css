@@ -1,0 +1,22 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+img{
+    border-radius: 5%;
+    /* height: 124%; */
+    opacity: 0.85;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+img:hover {
+    opacity: 1;
+}
+
+p {
+    position: absolute;
+    top: 80%;
+    color: white;
+    z-index: 100;
+}

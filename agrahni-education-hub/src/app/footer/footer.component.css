@@ -1,0 +1,10 @@
+/* .footer{
+    position: fixed;
+    bottom: 0px;
+} */
+
+.footer{
+    background: rgba(0, 0, 0, 0.7);;
+    color:white;
+    bottom: 0px !important;
+}
