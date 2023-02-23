@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-college-details',
@@ -7,14 +8,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./college-details.component.css']
 })
 export class CollegeDetailsComponent implements OnInit {
-  [x: string]: any;
+  data: any;
 
-  constructor(private http: HttpClient){
-    this.http.get('http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json').subscribe(response=>{
-    console.log(response);
+  constructor(private http: HttpClient, private auth: AuthService ){
+    this.auth.getapi('http://192.168.1.57:5000/api/v1/college').subscribe((response:any)=>{
+      this.data = response.data;
+      console.log(response.data);
     })
   }
-
   ngOnInit(): void {
    
   }

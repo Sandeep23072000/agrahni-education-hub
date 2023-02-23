@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { CollegeDetailsComponent } from './college-details/college-details.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { FooterComponent } from './footer/footer.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,18 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     CollegeDetailsComponent,
     CourseDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    AccountDetailsComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

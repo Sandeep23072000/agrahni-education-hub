@@ -3,20 +3,26 @@
     padding: 0px;
 }
 
-img{
+.selaction {
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+ul {
+    margin-top: 70px;
+    list-style-type: none;
+}
+
+li a {
+    height: 22rem;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin-top: 1.7rem;
+    margin-left: 1.7rem;
+    margin-right: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     border-radius: 5%;
-    /* height: 124%; */
-    opacity: 0.85;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-img:hover {
-    opacity: 1;
-}
-
-p {
-    position: absolute;
-    top: 80%;
-    color: white;
-    z-index: 100;
 }
