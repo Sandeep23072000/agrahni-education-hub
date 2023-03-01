@@ -8,7 +8,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class ContactusComponent implements OnInit {
   contectForm: FormGroup;
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder) {
     this.contectForm = fb.group({
       name: ['', Validators.required],
       email: '',
@@ -18,7 +18,7 @@ export class ContactusComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
 
 }

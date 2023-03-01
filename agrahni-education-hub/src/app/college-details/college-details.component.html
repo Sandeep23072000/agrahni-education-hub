@@ -3,12 +3,16 @@
 <div class="selaction d-flex">
     <ul *ngFor="let item of data">
         <li>
-            <a class="">
-                <img src="http://192.168.1.57:5000/{{item?.image}}" style="height:300px" alt="image">
-                <p class="mt-1 text-success fw-bold">{{item.name}}</p>
-                <p>{{item.address}}</p>
+            <a class="" href={{item?.website}}>
+                <img src="{{baseUrl+'/'+item?.image}}" style="height:300px" alt="image">
+                <p class="mt-1 text-success fw-bold fs-6">{{item.name}}</p>
+                <p style="font-size: 16px;">{{item.address}}</p>
             </a>
         </li>
+        <div class="text-center">
+            <button class="px-2 text-white border border-none rounded-2 mb-3 bg-success px-4 py-1 fw-bold fs-6" type="button"
+            (click)="CollegeInquiryDialog(item)">Inquiry</button> 
+        </div>
     </ul> 
 </div>
 

@@ -1,58 +1,15 @@
 <app-header></app-header>
-<div class="row mx-2">
-    <div class="col-2">
-        <div class="bg-success rounded-2 text-center">
-            <h4 class=" mt-5 bg-success rounded-2">MBA</h4>
-            <p>Details about MBA</p>
 
-        </div>
-        <div class="bg-success rounded-2 text-center">
-            <h4 class=" mt-5 bg-success rounded-2">NDA</h4>
-            <p>Details about NDA</p>
-
-        </div>
-    </div>
-
-    <div class="col-2">
-        <div class="bg-success rounded-2 text-center">
-            <h4 class=" mt-5 bg-success rounded-2">B.Tech</h4>
-            <p>Details about B.Tech</p>
-
-        </div>
-    </div>
-
-    <div class="col-2">
-        <div class="bg-success rounded-2 text-center">
-            <h4 class=" mt-5 bg-success rounded-2">M.tech</h4>
-            <p>Details about M.tech</p>
-
-        </div>
-    </div>
-
-    <div class="col-2">
-        <div class="bg-success rounded-2 text-center">
-            <h4 class=" mt-5 bg-success rounded-2">JEE</h4>
-            <p>Details about JEE</p>
-
-        </div>
-    </div>
-
-    <div class="col-2">
-        <div class="bg-success rounded-2 text-center">
-            <h4 class=" mt-5 bg-success rounded-2">NDA</h4>
-            <p>Details about NDA</p>
-
-        </div>
-    </div>
-
-    <div class="col-2">
-        <div class="bg-success rounded-2 text-center">
-            <h4 class=" mt-5 bg-success rounded-2">NEET</h4>
-            <p>Details about NEET</p>
-
-        </div>
-    </div>
-
+<div class="selaction d-flex">
+    <ul *ngFor="let item of data">
+        <li>
+            <a class="bg-success rounded-2 text-center">
+                <p class=" mt-3 fw-bold fs-5">{{item?.name}}</p>
+                <button class="px-2 text-danger border border-none bg-light rounded-2 mb-3 mt-2 fs-6 py-1" type="button"
+                    (click)="CourseInquiryDialog(item)">Click Here</button>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <app-footer></app-footer>

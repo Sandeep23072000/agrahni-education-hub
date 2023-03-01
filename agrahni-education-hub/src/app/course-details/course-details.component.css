@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.selaction {
+    flex-wrap: wrap;
+    padding: 0;
+
+}
+
+ul {
+    margin-top: 50px;
+    list-style-type: none;
+}
+
+li  {
+    height: 6rem;
+    width: 13rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin-top: 1.7rem;
+    margin-left: 1rem;
+    margin-right: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5%;
+}
