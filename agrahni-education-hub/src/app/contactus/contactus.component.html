@@ -2,43 +2,43 @@
 <div>
     <div class="bg-success d-flex justify-content-center">
         <div class="mt-4 mb-3">
-            <h4 class="text-white fw-bold">Contact Us</h4>
+            <p class="text-white fw-bold fs-5">Contact Us</p>
         </div>
     </div>
     <div class="row mt-5 mx-0">
         <div class="col-6">
             <div class="contact">
                 <p class="text-primary fs-6 fw-bold">CONTACT INFO</p>
-                <h5 class="fw-bold text-success"><mat-icon class="fs-5 me-2">location_on</mat-icon>Our Address</h5>
-                <p class="mb-0">Shop no 132 Tulsi Nagar,</p>
-                <p class="mb-0">Near Jain Dental Clinic</p>
-                <p>Sanganer, Jaipur</p>
-                <h5 class="fw-bold text-success mt-5"><mat-icon class="fs-5 me-3">phone</mat-icon>Contact</h5>
-                <p class="">Phone - 9785358307</p>
-                <h5 class="fw-bold text-success mt-5"><mat-icon class="fs-5 me-3">mail</mat-icon>Contact</h5>
-                <p>mail - aieducation132@gmail.com</p>
+                <h5 class="fw-bold text-success fs-6"><mat-icon class="fs-5 me-2">location_on</mat-icon>Our Address</h5>
+                <p class="mb-1 fs-6">Shop no 132 Tulsi Nagar,</p>
+                <p class="mb-1 fs-6">Near Jain Dental Clinic</p>
+                <p class="fs-6">Sanganer, Jaipur</p>
+                <h5 class="fw-bold text-success mt-5 fs-6"><mat-icon class="fs-5 me-3">phone</mat-icon>Contact</h5>
+                <p class="fs-6">Phone - 9785358307</p>
+                <h5 class="fw-bold text-success mt-5 fs-6"><mat-icon class="fs-5 me-3">mail</mat-icon>Contact</h5>
+                <p class="fs-6">mail - aieducation132@gmail.com</p>
             </div>
         </div>
         <div class="col-6">
-            <div class="card shadow-sm mb-5">
+            <div class="card shadow-lg mb-5">
                 <div class="card-body rounded-5">
                     <div>
-                        <h4 class="text-success text-center fw-bold">Ready to Get Started?</h4>
-                        <form class="" [formGroup]="contectForm">
-                            <label class="mb-0" for="name">Name</label>
+                        <p class="text-success text-center fw-bold fs-5">Ready to Get Started?</p>
+                        <form class="" [formGroup]="contactForm" (ngSubmit)="contactFormSubmit()">
+                            <label class="mb-0 fs-6" for="name">Name</label>
                             <input class="form-control mb-3" id="name" type="text" formControlName="name"
                                 placeholder="Enter Your Name">
-                            <label class="mb-0" for="email">Email</label>
+                            <label class="mb-0 fs-6" for="email">Email</label>
                             <input class="form-control mb-3" id="email" type="text" formControlName="email"
                                 placeholder="Enter Your Email">
-                            <label class="mb-0" for="phone">Phone</label>
-                            <input class="form-control mb-3" id="phone" type="text" formControlName="phone"
+                            <label class="mb-0 fs-6" for="phone">Phone</label>
+                            <input class="form-control mb-3" id="phone" type="text" formControlName="phoneno"
                                 placeholder="Enter Your Phone Number">
-                            <label class="mb-0" for="message">Message</label>
+                            <label class="mb-0 fs-6" for="message">Message</label>
                             <textarea class="form-control" id="message" type="text" formControlName="message"
                                 placeholder="Write Your Message... "></textarea>
                             <div class="text-center">
-                                <button class="btn-sm border-none btn-success mt-3 px-4 rounded-3"
+                                <button class="btn-sm border border-none btn-success mt-3 px-4 rounded-3"
                                     type="submit">Submit</button>
                             </div>
                         </form>

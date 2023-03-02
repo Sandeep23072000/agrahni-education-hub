@@ -27,7 +27,7 @@ export class CourseDetailsComponent implements OnInit {
   CourseInquiryDialog(data: any): void {
 
     const dialogRef = this.dialog.open(CollegeInquiryComponent, {
-      width: '45%',
+      width: '50%',
       data: {
         data: data,
         update: false,

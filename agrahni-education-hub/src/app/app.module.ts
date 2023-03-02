@@ -27,7 +27,6 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { FooterComponent } from './footer/footer.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { CourseInquiryComponent } from './models/course-inquiry/course-inquiry.component';
 import { CollegeInquiryComponent } from './models/college-inquiry/college-inquiry.component';
 
 @NgModule({
@@ -40,7 +39,6 @@ import { CollegeInquiryComponent } from './models/college-inquiry/college-inquir
     FooterComponent,
     AccountDetailsComponent,
     ContactusComponent,
-    CourseInquiryComponent,
     CollegeInquiryComponent
   ],
   imports: [

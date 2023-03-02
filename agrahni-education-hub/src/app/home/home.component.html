@@ -1,14 +1,10 @@
 <app-header></app-header>
 <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active text-center">
-            <img src="./assets/4413024.jpg" class="img" alt="img">
-        </div>
-        <div class="carousel-item text-center">
-            <img src="./assets/65.jpg" class="img" alt="img">
-        </div>
-        <div class="carousel-item text-center">
-            <img src="./assets/5317206.jpg" class="img" alt="img">
+        <div class="carousel-item text-center" *ngFor="let item of bannerdata; let i = index"
+            [ngClass]="i==0 ?'active': ''">
+
+            <img src="{{baseUrl+'/'+item?.image}}" class="img" alt="img">
         </div>
     </div>
     <button class="carousel-control-prev bg-success ms-5" type="button" data-bs-target="#carouselExampleControls"
@@ -31,10 +27,11 @@
                 <a class="fs-5 text-decoration-none text-white fw-bold">College</a>
             </div>
             <div>
-                <p class="mx-3">A unique way to segment your customers based on behavioral data with recency.</p>
+                <p class="mx-3 fs-6 lh-sm">A unique way to segment your customers based on behavioral data with recency.
+                </p>
             </div>
             <div class="text-center">
-                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4" type="button"
+                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4 fs-6 py-1" type="button"
                     routerLink="/college-details">Click Here</button>
             </div>
         </div>
@@ -47,10 +44,10 @@
                 <a class="fs-5 text-decoration-none text-white fw-bold">Course</a>
             </div>
             <div>
-                <p class="mx-3">Identify your campaign metadata with AI from images.</p>
+                <p class="mx-3 fs-6 lh-sm">Identify your campaign metadata with AI from images.</p>
             </div>
             <div class="text-center">
-                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4" type="button"
+                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4 fs-6 py-1" type="button"
                     routerLink="/course-details">Click Here</button>
             </div>
         </div>
@@ -63,10 +60,10 @@
                 <a class="fs-5 text-decoration-none text-white fw-bold">Accounting</a>
             </div>
             <div>
-                <p class="mx-3">See your subject lines performance with metrics such as open rate</p>
+                <p class="mx-3 fs-6 lh-sm">See your subject lines performance with metrics such as open rate</p>
             </div>
             <div class="text-center">
-                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4" type="button"
+                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4 fs-6 py-1" type="button"
                     routerLink="/account-details">Click Here</button>
             </div>
         </div>
@@ -79,10 +76,11 @@
                 <a class="fs-5 text-decoration-none text-white fw-bold">Others</a>
             </div>
             <div>
-                <p class="mx-3">officiis fugiat reiciendis, perferendis modi laudantium! Dolor, nihil quisquam.</p>
+                <p class="mx-3 fs-6 lh-sm">officiis fugiat reiciendis, perferendis modi laudantium! Dolor, nihil
+                    quisquam.</p>
             </div>
             <div class="text-center">
-                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4" type="button"
+                <button class="px-2 text-danger border border-none bg-light rounded-2 mt-4 fs-6 py-1" type="button"
                     routerLink="/">Click Here</button>
             </div>
         </div>
@@ -90,7 +88,7 @@
 </div>
 <hr class="text-success">
 <div class="">
-    <h3 class="text-center text-success">Latest News Here</h3>
+    <p class="text-center text-success fs-4">Latest News Here</p>
     <div class="">
         <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -154,30 +152,16 @@
 </div>
 <hr class="text-success mt-5">
 <div class="">
-    <p class="text-center text-success mt-5">Image Gellary</p>
+    <p class="text-center text-success mt-5 fs-4">Image Gellary</p>
     <div class="">
         <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active news-box">
-                    <div class="d-flex">
-                        <div class="">
-                            <img src="./assets/4413024.jpg" class="w-50" alt="img">
+                    <div class="carousel-inner">
+                        <div class="carousel-item text-center" *ngFor="let item of Igallerydata; let i = index"
+                            [ngClass]="i==0 ?'active': ''">
+                            <img src="{{baseUrl+'/'+item?.image}}" class="newsbox" alt="img">
                         </div>
-                        <div class="">
-                            <img src="./assets/65.jpg" class="w-50" alt="img">
-                        </div>
-                        <div class="">
-                            <img src="./assets/5317206.jpg" class="w-50" alt="img">
-                        </div>
-                        <div class="">
-                            <img src="./assets/5317206.jpg" class="w-50" alt="img">
-                        </div>
-                        <!-- <div class="">
-                            <img src="./assets/5317206.jpg" class="w-50" alt="img">
-                        </div>
-                        <div class="">
-                            <img src="./assets/5317206.jpg" class="w-50" alt="img">
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -196,7 +180,7 @@
 </div>
 <hr class="text-success mt-5">
 <div class="">
-    <p class="text-center text-success mt-5">Review</p>
+    <p class="text-center text-success mt-5 fs-4">Review</p>
     <div class="">
         <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
             <div class="carousel-inner">

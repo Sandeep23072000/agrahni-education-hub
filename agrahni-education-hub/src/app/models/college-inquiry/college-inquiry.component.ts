@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/service/auth.service';
   templateUrl: './college-inquiry.component.html',
   styleUrls: ['./college-inquiry.component.css']
 })
-export class CollegeInquiryComponent implements OnInit  {
+export class CollegeInquiryComponent implements OnInit {
   is_submit: boolean = false;
   error: string = '';
   CollegeInqForm = this.fb.group({
@@ -21,13 +21,14 @@ export class CollegeInquiryComponent implements OnInit  {
     collegename: '',
     coursename: '',
     schoolname: '',
+    type: this.data?.type,
   });
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private auth: AuthService, private fb: FormBuilder, public dialog: MatDialog, public dialogRef: MatDialogRef<CollegeInquiryComponent>) {
     console.log(data, 'course dialooggggg');
-    
-      this.updateCollege(data);
-    
+
+    this.updateCollege(data);
+
   }
 
   ngOnInit(): void {
@@ -36,18 +37,20 @@ export class CollegeInquiryComponent implements OnInit  {
 
   get uc() { return this.CollegeInqForm.controls; };
   updateCollege(data: any) {
-    this.uc['collegename'].setValue(data.data?.name);
-    this.uc['coursename'].setValue(data.data?.name);
+    //   this.uc['collegename'].setValue(data.data?.college);
+    //   this.uc['collegename'].setValue(data.data?.college);
+
+    this.uc['type'].setValue(data.data?.type);
   }
 
   CollegeInqFormSubmit() {
     this.is_submit = true;
     console.log(this.CollegeInqForm.value);
-    this.auth.postAPI('/enquiry/add',this.CollegeInqForm.value).subscribe(res=> {
+    this.auth.postAPI('/enquiry/add', this.CollegeInqForm.value).subscribe(res => {
       console.log(res);
-  });
-  this.closeDialog()
-}
+    });
+    this.closeDialog()
+  }
   closeDialog() {
     this.dialogRef.close('res');
   }
