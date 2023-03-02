@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     this.ShowBanner();
     this.ShowImgGallery();
     // this.ShowNews();
-    // this.ShowReview();
+    this.ShowReview();
   }
 
   ngOnInit(): void {

@@ -156,13 +156,10 @@
     <div class="">
         <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active news-box">
-                    <div class="carousel-inner">
-                        <div class="carousel-item text-center" *ngFor="let item of Igallerydata; let i = index"
-                            [ngClass]="i==0 ?'active': ''">
-                            <img src="{{baseUrl+'/'+item?.image}}" class="newsbox" alt="img">
-                        </div>
-                    </div>
+                <div class="carousel-item text-center" *ngFor="let item of Igallerydata; let i = index"
+                    [ngClass]="i==0 ?'active': ''">
+
+                    <img src="{{baseUrl+'/'+item?.image}}" class="newsbox" alt="img">
                 </div>
             </div>
             <button class="carousel-control-prev bg-success ms-5" type="button"
@@ -179,41 +176,39 @@
     </div>
 </div>
 <hr class="text-success mt-5">
-<div class="">
+<div>
     <p class="text-center text-success mt-5 fs-4">Review</p>
-    <div class="">
-        <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active news-box">
-                    <div class="" style="display: flex; justify-content: center; margin-left: -370px;">
-                        <div class="reviewbox border border-success ps-5 py-3">
-                            <p class="text-primary">First Review</p>
-                            <p class="">Details of first review</p>
+    <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item text-center" *ngFor="let item of reviewdata; let i = index"
+                [ngClass]="i==0 ?'active': ''">
+                <!-- <div>
+                            <img src="{{baseUrl+'/'+item?.image}}" class="newsbox" alt="img">
+                        </div> -->
+                <div class="reviewbox border border-success ps-5 py-3">
+                    <p class="text-success fs-5 mt-3">{{item?.title}}</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="fs-6 mt-4" style="margin-left: -7rem;">{{item?.description}}</p>
+                        </div>
+                        <div class="col-lg-6 mt-4">
+                            <img src="{{baseUrl+'/'+item?.image}}" class=" rounded-3" alt="img"
+                                style="height: 200px; width: 200px;">
                         </div>
                     </div>
                 </div>
-
-                <div class="carousel-item news-box">
-                    <div class="" style="display: flex; justify-content: center; margin-left: -370px;">
-                        <div class="reviewbox border border-success mx-3 ps-5 py-3">
-                            <p class="text-primary">Second Review</p>
-                            <p class="">Details of second review</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <button class="carousel-control-prev bg-success ms-5" type="button"
-                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next bg-success me-5" type="button"
-                data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+        <button class="carousel-control-prev bg-success ms-5" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next bg-success me-5" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 

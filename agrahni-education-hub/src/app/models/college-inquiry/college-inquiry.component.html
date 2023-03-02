@@ -32,7 +32,7 @@
                                 Number</label>
                             <input type="text" formControlName="mobileno" id="customername-field" class="form-control"
                                 placeholder="Enter Mobile Number" required>
-                            <p *ngIf="is_submit && CollegeInqForm.controls['name'].hasError('required')"
+                            <p *ngIf="is_submit && CollegeInqForm.controls['mobileno'].hasError('required')"
                                 style="color:red; margin-top: 8px;">
                                 Mobile Number is required</p>
                             <p style="color:red">{{error}}</p>

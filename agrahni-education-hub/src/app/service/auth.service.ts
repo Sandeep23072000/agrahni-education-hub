@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class AuthService {
-  domain = '192.168.1.12:4000'
+  domain = '192.168.1.5:4000'
   baseUrl: string = 'http://' + this.domain;
   apiUrl: string = this.baseUrl + '/api/v1';
   httpOptions: any;

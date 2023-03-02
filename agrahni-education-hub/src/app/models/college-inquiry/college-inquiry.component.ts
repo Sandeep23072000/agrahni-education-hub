@@ -46,10 +46,15 @@ export class CollegeInquiryComponent implements OnInit {
   CollegeInqFormSubmit() {
     this.is_submit = true;
     console.log(this.CollegeInqForm.value);
-    this.auth.postAPI('/enquiry/add', this.CollegeInqForm.value).subscribe(res => {
-      console.log(res);
-    });
-    this.closeDialog()
+    if (this.CollegeInqForm.value?.name && this.CollegeInqForm.value?.mobileno) {
+      this.auth.postAPI('/enquiry/add', this.CollegeInqForm.value).subscribe(res => {
+        console.log(res);
+      });
+      this.closeDialog()
+    }
+    else{
+      return
+    }
   }
   closeDialog() {
     this.dialogRef.close('res');
